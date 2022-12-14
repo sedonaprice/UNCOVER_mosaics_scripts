@@ -1,0 +1,38 @@
+
+# Compiled files
+*.py[cod]
+*.a
+*.o
+*.so
+__pycache__
+
+# Other generated files
+*/version.py
+*/cython_version.py
+htmlcov
+.coverage
+MANIFEST
+.ipynb_checkpoints
+
+# Sphinx
+docs/api
+docs/_build
+
+# Other
+.cache
+.pytest_cache
+.tox
+.*.sw[op]
+*~
+.project
+.pydevproject
+.settings
+*.log
+
+# Mac OSX
+.DS_Store
+
+# Dropbox
+Icon^M
+
+# Private data
