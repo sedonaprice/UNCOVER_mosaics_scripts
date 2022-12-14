@@ -19,7 +19,7 @@ Dependencies
 Examples
 --------
 
-Please see the Jupyter notebook ``UNCOVER_mosaics_examples.ipynb`` for examples of using these plotting scripts.
+Please see the Jupyter notebook ``examples_UNCOVER_mosaics.ipynb`` for examples of using these plotting scripts.
 
 License
 -------
