@@ -767,7 +767,7 @@ def load_data(fname_img, filt=None, upsample=False):
 
 
 
-def make_dataRGB(data_all=None, filters=None):
+def make_dataRGB(data_all=None, filters=None, colorprefix=['b','g','r']):
     """
     Take an input dict of dicts and create summed images for R/G/B.
     
@@ -780,15 +780,16 @@ def make_dataRGB(data_all=None, filters=None):
             has the following structure (eg, for 'F444W'):
                 data_all['F444W'] = {'IMG': <image>, 'WCS': <WCS>, 'HDR': <HDR>, 'filt': 'F444W'}
 
-        filt: str
-            Name of filter. For summing multiple filters, the name should 
+        filters: array-like
+            Array (of length 3) holding the name of the filters for R/G/B. 
+            For summing multiple filters, the name should 
             be a concatenation of the individual filter names, separated by '+'
             eg, 'F356W+F410M+F444W'
 
-        upsample: bool, optional
-            Option to upsample the LW filters to match the SW filter pixelscale (if True)
-            Otherwise, downsample the SW filters to match the LW pixelscale.
-            Default: False 
+        colorprefix: array-like, optional
+            Array (of length 3) holding the order of how the filters array entries map to R/G/B.
+            By default, the ordering is Blue - Green - Red (short to long wavelength)
+            Default: ['b','g','r']
 
     Returns
     -------
@@ -797,7 +798,6 @@ def make_dataRGB(data_all=None, filters=None):
 
     """
     
-    colorprefix = ['b','g','r']
     dataRGB = {}
     for colprefix, filtsum in zip(colorprefix, filters):
         filtlist = filtsum.split('+')
