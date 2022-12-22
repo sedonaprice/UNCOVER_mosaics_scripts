@@ -25,7 +25,7 @@ License
 -------
 
 These scripts are copyright (c) Sedona Price and licensed under the terms of the BSD 3-Clause license. 
-See the licenses folder for more information.
+See the license file (LICENSE.rst) for more information.
 
 
 .. _UNCOVER Survey: https://jwst-uncover.github.io/
